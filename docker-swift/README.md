@@ -1,5 +1,7 @@
 # Docker-Swift
 
+This sample was created for this [article](https://developer.ibm.com/swift/2015/12/15/running-swift-within-docker/).
+
 Here is a quick guide to creating a docker image of your very own with Swift baked in to build the next big thing.
 
 ## Prerequisites
