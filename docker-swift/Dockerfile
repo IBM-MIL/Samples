@@ -1,7 +1,7 @@
 FROM ubuntu:15.10
 
 # Latest Swift Version 
-ENV SWIFT_VERSION 2.2-SNAPSHOT-2015-12-01-b
+ENV SWIFT_VERSION 2.2-SNAPSHOT-2016-02-08-a
 ENV SWIFT_PLATFORM ubuntu15.10
 
 # Install Dependencies
@@ -20,7 +20,7 @@ RUN wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import - && \
 
 # Download and install Swift
 RUN SWIFT_ARCHIVE_NAME=swift-$SWIFT_VERSION-$SWIFT_PLATFORM && \
-    SWIFT_URL=https://swift.org/builds/$(echo "$SWIFT_PLATFORM" | tr -d .)/swift-$SWIFT_VERSION/$SWIFT_ARCHIVE_NAME.tar.gz && \
+    SWIFT_URL=https://swift.org/builds/swift-2.2-branch/$(echo "$SWIFT_PLATFORM" | tr -d .)/swift-$SWIFT_VERSION/$SWIFT_ARCHIVE_NAME.tar.gz && \
     wget $SWIFT_URL && \
     wget $SWIFT_URL.sig && \
     gpg --verify $SWIFT_ARCHIVE_NAME.tar.gz.sig && \
